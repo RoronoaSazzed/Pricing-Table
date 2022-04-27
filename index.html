@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Pricing Table Template</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Asap Condensed", sans-serif;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 1480px;
+        padding: 50px;
+      }
+
+      /* Common Code */
+
+      .mostPopular:before {
+        content: "Most Popular";
+        display: block;
+        padding: 5px;
+        background-color: #0074c2;
+        color: white;
+        font-size: 13px;
+        text-transform: capitalize;
+      }
+
+      .standOut {
+        background-color: #f8f8f8;
+      }
+
+      .supplicatingBox > .flexWrapper {
+        border-bottom: 1px solid lightgrey;
+      }
+
+      .supplicatingBox > .transparent {
+        border-bottom: 0px solid transparent;
+      }
+
+      /* Header Wrapper */
+
+      .flexWrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      .formDiv {
+        width: 35%;
+        padding: 25px;
+      }
+
+      .formDiv > .flexWrapper {
+        justify-content: space-around;
+      }
+
+      .packageName {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .equal {
+        flex: 1;
+        padding: 10px 25px;
+        text-align: center;
+      }
+
+      .packNameHeader {
+        font-size: 16px;
+      }
+
+      .packPrice {
+        font-size: 32px;
+      }
+
+      .packPrice span {
+        font-size: 20px;
+      }
+
+      .bottomLine {
+        font-size: 12px;
+      }
+
+      .bottomLine {
+        color: #0074c2;
+      }
+
+      /* Core Sec */
+
+      .characteristics {
+        width: 35%;
+      }
+
+      .checkMarks {
+        width: 65%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      .checkMarks > .equal {
+        padding: 15px;
+      }
+
+      .transparent > .checkMarks > .equal {
+        padding: 35px 15px 15px 15px;
+      }
+
+      .characTitle {
+        padding: 15px;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .boxTitle {
+        padding: 35px 15px 0px 15px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wrapper">
+        <div class="headerWrapper flexWrapper">
+          <div class="formDiv">
+            <form class="flexWrapper" action="/action_page.php">
+              <div>
+                <input
+                  type="radio"
+                  id="annually"
+                  name="fav_language"
+                  value="annually"
+                />
+                <label for="annually">Pay Anually</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="monthly"
+                  name="fav_language"
+                  value="monthly"
+                />
+                <label for="monthly">Pay Monthly</label><br />
+              </div>
+            </form>
+          </div>
+
+          <div class="packageName">
+            <div class="equal personal">
+              <p class="packNameHeader">Personal</p>
+              <p class="packPrice"><span>$</span> 14<br /></p>
+              <p>Per month</p>
+              <p class="bottomLine">Save 25% annually</p>
+            </div>
+
+            <div class="equal standOut business">
+              <p class="mostPopular packNameHeader">Business</p>
+              <p class="packPrice"><span>$</span> 23<br /></p>
+              <p>Per month</p>
+              <p class="bottomLine">Save 25% annually</p>
+            </div>
+
+            <div class="equal basicCom">
+              <p class="packNameHeader">Basic Commerce</p>
+              <p class="packPrice"><span>$</span> 27<br /></p>
+              <p>Per month</p>
+              <p class="bottomLine">Save 25% annually</p>
+            </div>
+
+            <div class="equal advanceCom">
+              <p class="packNameHeader">Advance Commerce</p>
+              <p class="packPrice"><span>$ </span>49<br /></p>
+              <p>Per month</p>
+              <p class="bottomLine">Save 25% annually</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core -->
+
+        <div class="supplicatingBox coreBox">
+          <div class="flexWrapper transparent">
+            <div class="characteristics">
+              <p class="boxTitle">Core</p>
+            </div>
+            <div class="checkMarks">
+              <div class="equal"></div>
+              <div class="equal standOut" style="color: transparent">+</div>
+              <div class="equal"></div>
+              <div class="equal"></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">free custom domain</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">SSL security</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">unlimited bandwidth</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle transparent">video storage</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal">30 Minutes</div>
+
+              <div class="equal standOut">30 Minutes</div>
+
+              <div class="equal">30 Minutes</div>
+
+              <div class="equal">30 Minutes</div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">SEO sites for site visibility</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">
+                templates to fit every need from blogs to portfolios
+              </p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">contributors</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal">2</div>
+
+              <div class="equal standOut">Unlimited</div>
+
+              <div class="equal">Unlimited</div>
+
+              <div class="equal">Unlimited</div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">mobile-optimized websites</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">24-7 support</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marketing -->
+
+        <div class="supplicatingBox marketingBox">
+          <div class="flexWrapper transparent">
+            <div class="characteristics">
+              <p class="boxTitle">Marketing</p>
+            </div>
+            <div class="checkMarks">
+              <div class="equal"></div>
+              <div class="equal standOut" style="color: transparent">+</div>
+              <div class="equal"></div>
+              <div class="equal"></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">advanced website analytics</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">google ads credits</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">promotional pop-ups and banners</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">squarespace video studio app</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal">limited</div>
+
+              <div class="equal standOut">full access</div>
+
+              <div class="equal">full access</div>
+
+              <div class="equal">full access</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commerce -->
+
+        <div class="supplicatingBox comBox">
+          <div class="flexWrapper transparent">
+            <div class="characteristics">
+              <p class="boxTitle">Commerce</p>
+            </div>
+            <div class="checkMarks">
+              <div class="equal"></div>
+              <div class="equal standOut" style="color: transparent">+</div>
+              <div class="equal"></div>
+              <div class="equal"></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">advanced website analytics</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">google ads credits</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">promotional pop-ups and banners</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal standOut">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+
+              <div class="equal"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </div>
+
+          <div class="flexWrapper">
+            <div class="characteristics">
+              <p class="characTitle">squarespace video studio app</p>
+            </div>
+
+            <div class="checkMarks">
+              <div class="equal">limited</div>
+
+              <div class="equal standOut">full access</div>
+
+              <div class="equal">full access</div>
+
+              <div class="equal">full access</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
