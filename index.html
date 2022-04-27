@@ -50,6 +50,11 @@
         color: white;
         font-size: 13px;
         text-transform: capitalize;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
       }
 
       .standOut {
@@ -84,7 +89,7 @@
       .packageName {
         width: 65%;
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: space-between;
       }
 
@@ -92,6 +97,7 @@
         flex: 1;
         padding: 10px 25px;
         text-align: center;
+        position: relative;
       }
 
       .packNameHeader {
@@ -145,11 +151,112 @@
         font-size: 14px;
         font-weight: 600;
       }
+
+      /* Media Query */
+
+      /* Media Query */
+
+      @media (min-width: 1024px) {
+        .mobilePricingTable {
+          display: none;
+        }
+      }
+
+      @media (min-width: 320px) and (max-width: 768px) {
+        .pcPricingTable {
+          display: none;
+        }
+
+        .mobilePricingTable {
+          display: block;
+        }
+
+        .packageBox {
+          padding: 30px;
+          border: 1px solid #e1e1e1;
+          margin-bottom: 30px;
+          position: relative;
+        }
+
+        .wrapper {
+          width: 100%;
+          padding: 30px;
+        }
+
+        .formDiv {
+          width: 100%;
+          padding: 10px 30px;
+        }
+
+        .formDiv > .flexWrapper {
+          flex-direction: column;
+        }
+
+        .formDiv > .flexWrapper > div {
+          padding: 10px 0px;
+        }
+
+        .packNameHeader {
+          padding-bottom: 15px;
+        }
+
+        .bottomLine {
+          padding-top: 10px;
+        }
+
+        .packPrice:after {
+          content: "per month";
+          font-size: 14px;
+          padding-left: 5px;
+          position: absolute;
+        }
+
+        .flexWrapper {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .equal {
+          padding: 15px 0px;
+        }
+
+        .boxTitle {
+          padding: 0px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .characTitle {
+          padding: 0px;
+          line-height: 35px;
+        }
+
+        .characTitle span {
+          padding-right: 10px;
+        }
+
+        .mostPopular:before {
+          content: "Most Popular";
+          display: block;
+          padding: 5px 0px;
+          background-color: #0074c2;
+          color: white;
+          font-size: 14px;
+          text-transform: capitalize;
+          position: absolute;
+          top: -15px;
+          left: 0%;
+          right: 0%;
+          text-align: center;
+          width: 100%;
+          transform: translateX(0%);
+        }
+      }
     </style>
   </head>
   <body>
     <div class="parentDiv">
-      <div class="wrapper">
+      <div class="wrapper pcPricingTable">
         <div class="headerWrapper flexWrapper">
           <div class="formDiv">
             <form class="flexWrapper" action="/action_page.php">
@@ -215,7 +322,7 @@
             </div>
             <div class="checkMarks">
               <div class="equal"></div>
-              <div class="equal standOut" style="color: transparent">+</div>
+              <div class="equal standOut"></div>
               <div class="equal"></div>
               <div class="equal"></div>
             </div>
@@ -391,7 +498,7 @@
             </div>
             <div class="checkMarks">
               <div class="equal"></div>
-              <div class="equal standOut" style="color: transparent">+</div>
+              <div class="equal standOut"></div>
               <div class="equal"></div>
               <div class="equal"></div>
             </div>
@@ -477,7 +584,7 @@
             </div>
             <div class="checkMarks">
               <div class="equal"></div>
-              <div class="equal standOut" style="color: transparent">+</div>
+              <div class="equal standOut"></div>
               <div class="equal"></div>
               <div class="equal"></div>
             </div>
@@ -551,6 +658,376 @@
 
               <div class="equal">full access</div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper mobilePricingTable">
+        <div class="headerWrapper">
+          <div class="formDiv">
+            <form class="flexWrapper" action="/action_page.php">
+              <div>
+                <input
+                  type="radio"
+                  id="annually"
+                  name="fav_language"
+                  value="annually"
+                />
+                <label for="annually">Pay Anually</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="monthly"
+                  name="fav_language"
+                  value="monthly"
+                />
+                <label for="monthly">Pay Monthly</label><br />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="packageBox personal">
+          <div class="packName">
+            <p class="packNameHeader">Personal</p>
+            <p class="packPrice">$ 14</p>
+            <p class="bottomLine">Save 25% annually</p>
+          </div>
+
+          <!-- Core -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">core</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> free custom domain
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> SSL security
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> unlimited bandwidth
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> video storage
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> SEO sites for site
+              visibility
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> templates to fit
+              every need from blogs to portfolios
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> up to 2
+              contributors
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> mobile optimized
+              websites
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> 24/7 customer
+              support
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> basic website
+              metrics
+            </p>
+          </div>
+
+          <!-- Marketing -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">marketing</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> advanced website
+              analytics
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> google ads credits
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> promotional pop-ups
+              and banners
+            </p>
+          </div>
+
+          <!-- Commerce -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">commerce</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> fully integrated
+              e-commerce
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> 3% transaction fee
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> sell unlimited
+              products
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> accept donations
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> gift cards
+            </p>
+          </div>
+        </div>
+
+        <div class="mostPopular packageBox business">
+          <div class="packName">
+            <p class="packNameHeader">Business</p>
+            <p class="packPrice">$ 14</p>
+            <p class="bottomLine">Save 25% annually</p>
+          </div>
+
+          <!-- Core -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">core</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> free custom domain
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> SSL security
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> unlimited bandwidth
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> video storage
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> SEO sites for site
+              visibility
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> templates to fit
+              every need from blogs to portfolios
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> up to 2
+              contributors
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> mobile optimized
+              websites
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> 24/7 customer
+              support
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> basic website
+              metrics
+            </p>
+          </div>
+
+          <!-- Marketing -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">marketing</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> advanced website
+              analytics
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> google ads credits
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> promotional pop-ups
+              and banners
+            </p>
+          </div>
+
+          <!-- Commerce -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">commerce</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> fully integrated
+              e-commerce
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> 3% transaction fee
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> sell unlimited
+              products
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> accept donations
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> gift cards
+            </p>
+          </div>
+        </div>
+
+        <div class="packageBox commerce">
+          <div class="packName">
+            <p class="packNameHeader">Personal</p>
+            <p class="packPrice">$ 14</p>
+            <p class="bottomLine">Save 25% annually</p>
+          </div>
+
+          <!-- Core -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">core</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> free custom domain
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> SSL security
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> unlimited bandwidth
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> video storage
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> SEO sites for site
+              visibility
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> templates to fit
+              every need from blogs to portfolios
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> up to 2
+              contributors
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> mobile optimized
+              websites
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> 24/7 customer
+              support
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> basic website
+              metrics
+            </p>
+          </div>
+
+          <!-- Marketing -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">marketing</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> advanced website
+              analytics
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> google ads credits
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> promotional pop-ups
+              and banners
+            </p>
+          </div>
+
+          <!-- Commerce -->
+
+          <div class="flexWrapper">
+            <div class="equal">
+              <p class="boxTitle">commerce</p>
+            </div>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> fully integrated
+              e-commerce
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> 3% transaction fee
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> sell unlimited
+              products
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> accept donations
+            </p>
+
+            <p class="characTitle">
+              <span><i class="fa-solid fa-check"></i></span> gift cards
+            </p>
           </div>
         </div>
       </div>
